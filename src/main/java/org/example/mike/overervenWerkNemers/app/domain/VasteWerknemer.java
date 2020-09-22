@@ -11,6 +11,21 @@ public class VasteWerknemer {
         setSalarisSchaal(salarisSchaal);
     }
 
+    public int getSalaris()
+    {
+        int salaris = salarisSchaal * 1000;
+        return salaris;
+    }
+
+    @Override
+    public String toString() {
+        return "VasteWerknemer{" +
+                "id=" + id +
+                ", naam='" + naam + '\'' +
+                ", salarisSchaal=" + salarisSchaal +
+                '}';
+    }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -34,5 +49,4 @@ public class VasteWerknemer {
     public int getSalarisSchaal() {
         return salarisSchaal;
     }
-
-
+}

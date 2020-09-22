@@ -13,6 +13,22 @@ public class TijdelijkeWerknemer {
         setUurloon(uurloon);
     }
 
+    public int getSalaris()
+    {
+        int salaris = aantalUren * uurloon;
+        return salaris;
+    }
+
+    @Override
+    public String toString() {
+        return "TijdelijkeWerknemer{" +
+                "id=" + id +
+                ", naam='" + naam + '\'' +
+                ", aantalUren=" + aantalUren +
+                ", uurloon=" + uurloon +
+                '}';
+    }
+
     public void setId(int id) {
         this.id = id;
     }

@@ -16,6 +16,15 @@ public class overervenTests {
         TijdelijkeWerknemer tijdelijkeWerknemer1 = new TijdelijkeWerknemer(1, "D", 40, 25);
         TijdelijkeWerknemer tijdelijkeWerknemer2 = new TijdelijkeWerknemer(2, "Dd", 40, 22);
         TijdelijkeWerknemer tijdelijkeWerknemer3 = new TijdelijkeWerknemer(3, "De", 40, 23);
+
+        System.out.println(vasteWerknemer1.toString() + ", " + "salaris = " + vasteWerknemer1.getSalaris());
+        System.out.println(vasteWerknemer2.toString() + ", " + "salaris = " + vasteWerknemer2.getSalaris());
+        System.out.println(vasteWerknemer3.toString() + ", " + "salaris = " + vasteWerknemer3.getSalaris());
+        System.out.println(tijdelijkeWerknemer1.toString() + ", " + "salaris = " + tijdelijkeWerknemer1.getSalaris());
+        System.out.println(tijdelijkeWerknemer2.toString() + ", " + "salaris = " + tijdelijkeWerknemer2.getSalaris());
+        System.out.println(tijdelijkeWerknemer3.toString() + ", " + "salaris = " + tijdelijkeWerknemer3.getSalaris());
     }
+
+
 
 }
