@@ -1,8 +1,6 @@
 package org.example.mike.overervenWerkNemers.app.domain;
 
-public class TijdelijkeWerknemer {
-    private int id;
-    private String naam;
+public class TijdelijkeWerknemer extends Werknemer{
     private int aantalUren;
     private int uurloon;
 
@@ -27,22 +25,6 @@ public class TijdelijkeWerknemer {
                 ", aantalUren=" + aantalUren +
                 ", uurloon=" + uurloon +
                 '}';
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setNaam(String naam) {
-        this.naam = naam;
-    }
-
-    public String getNaam() {
-        return naam;
     }
 
     public void setAantalUren(int aantalUren) {

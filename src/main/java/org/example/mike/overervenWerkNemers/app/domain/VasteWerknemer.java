@@ -1,8 +1,6 @@
 package org.example.mike.overervenWerkNemers.app.domain;
 
-public class VasteWerknemer {
-    private int id;
-    private String naam;
+public class VasteWerknemer extends Werknemer{
     private int salarisSchaal;
 
     public VasteWerknemer(int id, String naam, int salarisSchaal) {
