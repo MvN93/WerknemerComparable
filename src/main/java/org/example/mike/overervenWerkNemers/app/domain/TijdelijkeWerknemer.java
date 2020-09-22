@@ -5,8 +5,7 @@ public class TijdelijkeWerknemer extends Werknemer{
     private int uurloon;
 
     public TijdelijkeWerknemer(int id, String naam, int aantalUren, int uurloon) {
-        setId(id);
-        setNaam(naam);
+        super(id, naam);
         setAantalUren(aantalUren);
         setUurloon(uurloon);
     }

@@ -4,6 +4,17 @@ public class Werknemer {
     protected int id;
     protected String naam;
 
+    Werknemer(int id, String naam)
+    {
+        setId(id);
+        setNaam(naam);
+    }
+
+    public int getSalaris()
+    {
+        return 0;
+    }
+
     public void setId(int id) {
         this.id = id;
     }

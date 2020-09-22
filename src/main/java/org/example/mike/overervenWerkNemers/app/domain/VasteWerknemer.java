@@ -4,8 +4,7 @@ public class VasteWerknemer extends Werknemer{
     private int salarisSchaal;
 
     public VasteWerknemer(int id, String naam, int salarisSchaal) {
-        setId(id);
-        setNaam(naam);
+        super(id, naam);
         setSalarisSchaal(salarisSchaal);
     }
 
