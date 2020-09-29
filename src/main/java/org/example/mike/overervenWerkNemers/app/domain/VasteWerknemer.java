@@ -17,7 +17,21 @@ public class VasteWerknemer extends Werknemer implements Comparable{
     @Override
     public int compareTo(Object otherObject) {
         Werkneembaar otherWerknemer = (Werkneembaar) otherObject;
-        return this.getNaam().charAt(0) - otherWerknemer.getNaam().charAt(0);
+        int letterDifference = 0;
+        int letterIndex = 0;
+        while((letterDifference == 0) && (letterIndex <= 15)) {
+            //see if the letter at current index is different, starts at 0
+            letterDifference = this.getNaam().charAt(letterIndex) - otherWerknemer.getNaam().charAt(letterIndex);
+
+            //if not the same same give either negative or positive number to ordering
+            if(!(letterDifference == 0)){
+                return letterDifference;}
+            //if same check next letter
+            else{
+                letterIndex = letterIndex + 1;
+            }
+        }
+        return letterDifference;
     }
 
     public String toStringRepresentatie() {

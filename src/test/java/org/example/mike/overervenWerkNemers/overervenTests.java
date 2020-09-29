@@ -30,7 +30,7 @@ public class overervenTests {
         Arrays.sort(lijstjeVanWerknemers);
         System.out.println(" ");
 
-        System.out.println("Gesorteerd op id:");
+        System.out.println("Gesorteerd op naam:");
         printLijstjeWerknemersNaamEnSalaris(lijstjeVanWerknemers);
 
         Comparable comparable;
