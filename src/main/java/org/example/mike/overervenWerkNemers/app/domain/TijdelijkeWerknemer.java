@@ -1,6 +1,6 @@
 package org.example.mike.overervenWerkNemers.app.domain;
 
-public class TijdelijkeWerknemer extends Werknemer{
+public class TijdelijkeWerknemer extends Werknemer implements Comparable{
     private int aantalUren;
     private int uurloon;
 
@@ -16,6 +16,11 @@ public class TijdelijkeWerknemer extends Werknemer{
         return salaris;
     }
 
+    @Override
+    public int compareTo(Object otherObject) {
+        Werkneembaar otherWerknemer = (Werkneembaar) otherObject;
+        return this.getSalaris() - otherWerknemer.getSalaris();
+    }
 
     public String toStringRepresentatie() {
         return "TijdelijkeWerknemer{" +
