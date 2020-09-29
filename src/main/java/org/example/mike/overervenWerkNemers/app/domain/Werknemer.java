@@ -37,10 +37,10 @@ public abstract class Werknemer implements Werkneembaar, Comparable{
                 }
             }
             else if((letterIndex < this.getNaam().length()) && !(letterIndex < otherWerknemer.getNaam().length())){
-                return 1; //kortere naam komt dan eerder te staan
+                return 1; //kortere naam (van otherWerknemer) komt dan eerder te staan (want letterindex is nog kleiner dan lengte van this)
             }
             else if(!(letterIndex < this.getNaam().length()) && (letterIndex < otherWerknemer.getNaam().length())){
-                return -1; //kortere naam komt dan eerder te staan
+                return -1; //kortere naam (van this) komt dan eerder te staan
             }
             else{return 0;}
         }
