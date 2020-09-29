@@ -19,7 +19,7 @@ public class TijdelijkeWerknemer extends Werknemer implements Comparable{
     @Override
     public int compareTo(Object otherObject) {
         Werkneembaar otherWerknemer = (Werkneembaar) otherObject;
-        return this.getId() - otherWerknemer.getId();
+        return this.getNaam().charAt(0) - otherWerknemer.getNaam().charAt(0);
     }
 
     public String toStringRepresentatie() {
