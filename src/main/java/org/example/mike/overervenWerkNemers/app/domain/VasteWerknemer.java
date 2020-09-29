@@ -17,7 +17,7 @@ public class VasteWerknemer extends Werknemer implements Comparable{
     @Override
     public int compareTo(Object otherObject) {
         Werkneembaar otherWerknemer = (Werkneembaar) otherObject;
-        return this.getSalaris() - otherWerknemer.getSalaris();
+        return this.getId() - otherWerknemer.getId();
     }
 
     public String toStringRepresentatie() {

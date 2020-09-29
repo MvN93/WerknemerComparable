@@ -21,7 +21,7 @@ public class overervenTests {
         Werkneembaar tijdelijkeWerknemer2 = new TijdelijkeWerknemer(5, "Mike", 40, 22);
         Werkneembaar tijdelijkeWerknemer3 = new TijdelijkeWerknemer(6, "Daan", 40, 33);
 
-        Werkneembaar[] lijstjeVanWerknemers = {vasteWerknemer1, vasteWerknemer2, vasteWerknemer3, tijdelijkeWerknemer1, tijdelijkeWerknemer2, tijdelijkeWerknemer3};
+        Werkneembaar[] lijstjeVanWerknemers = {vasteWerknemer1, tijdelijkeWerknemer1, vasteWerknemer3, vasteWerknemer2, tijdelijkeWerknemer2, tijdelijkeWerknemer3};
 
         System.out.println("Niet gesorteerd:");
         printLijstjeWerknemersNaamEnSalaris(lijstjeVanWerknemers);
@@ -30,7 +30,7 @@ public class overervenTests {
         Arrays.sort(lijstjeVanWerknemers);
         System.out.println(" ");
 
-        System.out.println("Gesorteerd op salaris:");
+        System.out.println("Gesorteerd op id:");
         printLijstjeWerknemersNaamEnSalaris(lijstjeVanWerknemers);
 
         Comparable comparable;
@@ -40,7 +40,7 @@ public class overervenTests {
 
     void printLijstjeWerknemersNaamEnSalaris(Werkneembaar[] lijstjeVanWerknemers){
         for(Werkneembaar werkneembaar : lijstjeVanWerknemers){
-            System.out.println(werkneembaar.getNaam() + " verdient: " + werkneembaar.getSalaris());
+            System.out.println(werkneembaar.getNaam() + "(id: " + werkneembaar.getId() + ") " + " verdient: " + werkneembaar.getSalaris());
         }
     }
 
