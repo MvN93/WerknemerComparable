@@ -14,8 +14,9 @@ public class VasteWerknemer extends Werknemer{
         return salaris;
     }
 
-    @Override
-    public String toString() {
+
+
+    public String toStringRepresentatie() {
         return "VasteWerknemer{" +
                 "id=" + id +
                 ", naam='" + naam + '\'' +

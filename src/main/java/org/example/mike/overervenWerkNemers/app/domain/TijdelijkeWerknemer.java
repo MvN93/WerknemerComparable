@@ -16,8 +16,8 @@ public class TijdelijkeWerknemer extends Werknemer{
         return salaris;
     }
 
-    @Override
-    public String toString() {
+
+    public String toStringRepresentatie() {
         return "TijdelijkeWerknemer{" +
                 "id=" + id +
                 ", naam='" + naam + '\'' +
