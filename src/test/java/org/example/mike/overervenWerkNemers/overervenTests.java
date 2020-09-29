@@ -14,10 +14,10 @@ public class overervenTests {
     @Test
     void printGesorteerdLijstje(){
         Werkneembaar vasteWerknemer1 = new VasteWerknemer(1, "Sjoerd", 1);
-        Werkneembaar vasteWerknemer2 = new VasteWerknemer(2, "Dave", 4);
+        Werkneembaar vasteWerknemer2 = new VasteWerknemer(2, "Da", 4);
         Werkneembaar vasteWerknemer3 = new VasteWerknemer(3, "Rein", 3);
 
-        Werkneembaar tijdelijkeWerknemer1 = new TijdelijkeWerknemer(4, "Dennis", 40, 25);
+        Werkneembaar tijdelijkeWerknemer1 = new TijdelijkeWerknemer(4, "Dannis", 40, 25);
         Werkneembaar tijdelijkeWerknemer2 = new TijdelijkeWerknemer(5, "Mike", 40, 22);
         Werkneembaar tijdelijkeWerknemer3 = new TijdelijkeWerknemer(6, "Daan", 40, 33);
 
