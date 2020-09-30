@@ -1,10 +1,7 @@
 package org.example.mike.overervenWerkNemers;
 
 
-import org.example.mike.overervenWerkNemers.app.domain.TijdelijkeWerknemer;
-import org.example.mike.overervenWerkNemers.app.domain.VasteWerknemer;
-import org.example.mike.overervenWerkNemers.app.domain.Werkneembaar;
-import org.example.mike.overervenWerkNemers.app.domain.Werknemer;
+import org.example.mike.overervenWerkNemers.app.domain.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -27,14 +24,25 @@ public class overervenTests {
         printLijstjeWerknemersNaamEnSalaris(lijstjeVanWerknemers);
 
         System.out.println(" ");
-        Arrays.sort(lijstjeVanWerknemers);
+        Arrays.sort(lijstjeVanWerknemers, new WerknemerSalarisComparator());
+        System.out.println(" ");
+
+        System.out.println("Gesorteerd op salaris:");
+        printLijstjeWerknemersNaamEnSalaris(lijstjeVanWerknemers);
+
+        System.out.println(" ");
+        Arrays.sort(lijstjeVanWerknemers, new WerknemerIDComparator());
+        System.out.println(" ");
+
+        System.out.println("Gesorteerd op id:");
+        printLijstjeWerknemersNaamEnSalaris(lijstjeVanWerknemers);
+
+        System.out.println(" ");
+        Arrays.sort(lijstjeVanWerknemers, new WerknemerNaamComparator());
         System.out.println(" ");
 
         System.out.println("Gesorteerd op naam:");
         printLijstjeWerknemersNaamEnSalaris(lijstjeVanWerknemers);
-
-        Comparable comparable;
-
     }
 
 
