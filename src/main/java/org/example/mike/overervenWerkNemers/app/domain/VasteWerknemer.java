@@ -1,6 +1,8 @@
 package org.example.mike.overervenWerkNemers.app.domain;
 
 public class VasteWerknemer extends Werknemer{
+    public static final int MINIMUM_SALARIS_SCHAAL = 4;
+    public static final int MAXIMUM_SALARIS_SCHAAL = 20;
     private int salarisSchaal;
 
     public VasteWerknemer(int id, String naam, int salarisSchaal) {
@@ -39,6 +41,9 @@ public class VasteWerknemer extends Werknemer{
     }
 
     public void setSalarisSchaal(int salarisSchaal) {
+        if(salarisSchaal < MINIMUM_SALARIS_SCHAAL || salarisSchaal > MAXIMUM_SALARIS_SCHAAL){
+            throw new OngeldigeSalarisSchaalException("De ingevoerde salarisschaal is ongeldig. Let op geldige schalen lopen van " + MINIMUM_SALARIS_SCHAAL + " tot " + MAXIMUM_SALARIS_SCHAAL + ".");
+        }
         this.salarisSchaal = salarisSchaal;
     }
 

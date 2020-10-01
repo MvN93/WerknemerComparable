@@ -9,6 +9,46 @@ import java.util.Arrays;
 public class overervenTests {
 
     @Test
+    void exceptionVasteWerknemerSchaal(){
+        Werkneembaar vasteWerknemer1 = new VasteWerknemer(1, "Sjoerd", 1);
+    }
+
+    @Test
+    void exceptionVasteWerknemerSchaalThrowAndCatch(){
+        System.out.println("Methode Begonnen");
+        try{
+            Werkneembaar vasteWerknemer1 = new VasteWerknemer(1, "Sjoerd", 1);
+            System.out.println("Try succesvol");
+        }
+        catch(OngeldigeSalarisSchaalException e){
+            System.out.println("Ongeldige salarisschaal exception");
+        }
+        catch(Exception e){
+            System.out.println("General exception");
+        }
+        System.out.println("Methode Afgerond");
+
+    }
+
+    @Test
+    void exceptionVasteWerknemerSchaalHogerNiveauException(){
+        System.out.println("Methode Begonnen");
+        try{
+            Werkneembaar vasteWerknemer1 = new VasteWerknemer(1, "Sjoerd", 1);
+            System.out.println("Try succesvol");
+        }
+        catch(OngeldigeSalarisSchaalException e){
+            System.out.println("Ongeldige salarisschaal exception");
+            throw new RuntimeException("Aanmaken Vaste Werknemer niet gelukt ivm ongeldigheid salarisschaal", e);
+        }
+        catch(Exception e){
+            System.out.println("General exception");
+        }
+        System.out.println("Methode Afgerond");
+
+    }
+
+    @Test
     void printGesorteerdLijstje(){
         Werkneembaar vasteWerknemer1 = new VasteWerknemer(1, "Sjoerd", 1);
         Werkneembaar vasteWerknemer2 = new VasteWerknemer(2, "Da", 4);
